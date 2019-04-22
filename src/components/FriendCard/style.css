@@ -1,10 +1,10 @@
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 300px;
+  height: 280px;
   margin: 1rem;
   position: relative;
-  width: 180px;
+  width: 170px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
@@ -13,7 +13,7 @@
   height: 100%;
   overflow: hidden;
   text-align: center;
-  background: linear-gradient( rgb(126, 148, 219) , white);
+  background: linear-gradient( rgb(173, 186, 230) , white);
 }
 .card > .img-container > img {
   width: 100%;

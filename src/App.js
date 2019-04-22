@@ -7,7 +7,6 @@ import friends from "./friends.json";
 import shuffle from "shuffle-array";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     friends: friends,
     score: 0,
@@ -45,7 +44,7 @@ class App extends Component {
       clicked.push(id);
       this.setState({ clicked: clicked });
       shuffle(this.state.friends);
-      console.log(this.state);
+      // console.log(this.state);
     }
   };
 

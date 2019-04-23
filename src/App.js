@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HeroCard from "./components/HeroCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Scores from "./components/Scores";
 // Using an external npm package to shuffle the friends array
 import heroes from "./heroes.json";
 import shuffle from "shuffle-array";
@@ -54,8 +55,8 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Overwatch Clicky Game!</Title>
-        <Title>Score: {this.state.score}</Title>
-        <Title>High Score: {this.state.overallHighScore}</Title>
+        <Scores>Score: {this.state.score}</Scores>
+        <Scores>High Score: {this.state.overallHighScore}</Scores>
         {this.state.heroes.map(hero => (
           <HeroCard
             clickedImage={this.clickedImage}

@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Clicky Game!</Title>
+        <Title>Overwatch Clicky Game!</Title>
         <Title>Score: {this.state.score}</Title>
         <Title>High Score: {this.state.overallHighScore}</Title>
         {this.state.heroes.map(friend => (

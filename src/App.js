@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import HeroCard from "./components/HeroCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 // Using an external npm package to shuffle the friends array
-import friends from "./friends.json";
+import heroes from "./heroes.json";
 import shuffle from "shuffle-array";
 
 class App extends Component {
   state = {
-    friends: friends,
+    heroes: heroes,
     score: 0,
     highScore: 0,
     overallHighScore: "",
@@ -29,7 +29,7 @@ class App extends Component {
       }
       this.setState({ clicked: [] });
       this.setState({ highScore: 0 });
-      shuffle(this.state.friends);
+      shuffle(this.state.heroes);
       // console.log(this.state);
     }
     // Otherwise, push the image's ID into the clicked array and increment the scores
@@ -43,20 +43,20 @@ class App extends Component {
       let clicked = this.state.clicked;
       clicked.push(id);
       this.setState({ clicked: clicked });
-      shuffle(this.state.friends);
+      shuffle(this.state.heroes);
       // console.log(this.state);
     }
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.heroes and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Clicky Game!</Title>
         <Title>Score: {this.state.score}</Title>
         <Title>High Score: {this.state.overallHighScore}</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
+        {this.state.heroes.map(friend => (
+          <HeroCard
             clickedImage={this.clickedImage}
             id={friend.id}
             key={friend.id}
